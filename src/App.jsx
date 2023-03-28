@@ -1,26 +1,28 @@
-import  './app.css';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import NavBar from './componentes/NavBar';
-import contacto from './componentes/paginas/contacto';
-import inicio from './componentes/paginas/inicio';
-import destacados from './componentes/paginas/Destacados';
-import informacion from './componentes/paginas/informacion';
+import "./App.css";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import NavBar from "./components/NavBar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-      </BrowserRouter>
-        <Routes>
-          <Route/ path= '/' element={<Inicio/>} >
-          <Route/ path= '/' element={<Destacados/>} >
-          <Route/ path= '/' element={<Informacion/>} >
-          <Route/ path= '/' element={<Contacto/>} >
-        </Routes>
-      <BrowserRouter/>
-       <NavBar/>
+    <BrowserRouter>
+      <NavBar />
 
-      </div>
+      <Routes>
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/category/:categoryid" element={ <ItemListContainer/> } />
+        
+        <Route path="/detalle/:cityid" element={<ItemDetailContainer />} />
+        {}
+        
+        <Route path="/prueba" element={<h1>Prueba Ruta</h1>} />
+        <Route path="*" element={<h1>Error 404: Page not found</h1>} />
+      </Routes>
+
+      {}
+    </BrowserRouter>
   );
 }
 

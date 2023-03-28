@@ -1,40 +1,40 @@
-import React from 'react'
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-const NavBar =() => {
-    return (
-        <>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="#">MiApp</a>
-    <button className="navNamebar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to='/inicio'>inicio</Link>
+function NavBar() {
+  return (
+    <nav>
+      <ul>
+        <Link to="/">
+          <h4>Logo ECommerce</h4>
+        </Link>
+
+        <li>
+          <Link to="/">Inicio</Link>
         </li>
-        <li className="nav-item">
-          <Link className="nav-link" to='/destacados'>destacados</Link>
+        <li>
+          <Link to="/category/Nigeria">Nigeria</Link>
         </li>
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item" to='/contacto'>contacto</a></li>
-            <li><a className="dropdown-item" to='/informacion' >informacion</a></li>
-            
-          </ul>
+        <li>
+          <Link to="/category/Serbia">Serbia</Link>
         </li>
+        <li>
+          <Link to="/category/China">China</Link>
+        </li>
+        <li>
+          <Link to="/prueba">Prueba</Link>
+        </li>
+
+        <li>
+          <a href="https://coderhouse.com">Coder</a>
+        </li>
+        {/* CartWidget*/}
+        <div>
+          🛒
+          <span className="cartWidget_count">3</span>
+        </div>
       </ul>
-    </div>
-  </div>
-</nav>
-        </>
-    )
+    </nav>
+  );
 }
 
-export default NavBar
+export default NavBar;
