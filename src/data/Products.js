@@ -1,100 +1,99 @@
 const products = [
-    {
-      id: 1,
-      title: "Leskovac",
-      category: "Serbia",
-      price: 9960.69,
-      stock: 64,
-      img: "http://dummyimage.com/250x250.png/cc0000/ffffff",
-    },
-    {
-      id: 2,
-      title: "Okuta",
-      category: "Nigeria",
-      price: 7017.59,
-      stock: 45,
-      img: "http://dummyimage.com/250x250.png/ff4444/ffffff",
-    },
-    {
-      id: 3,
-      title: "Akure",
-      category: "Nigeria",
-      price: 5553.04,
-      stock: 40,
-      img: "http://dummyimage.com/250x250.png/ff4444/ffffff",
-    },
-    {
-      id: 4,
-      title: "Wola Rębkowska",
-      category: "Poland",
-      price: 7318.24,
-      stock: 310,
-      img: "http://dummyimage.com/250x250.png/cc0000/ffffff",
-    },
-    {
-      id: 5,
-      title: "Jiamaogong",
-      category: "China",
-      price: 4835.13,
-      stock: 225,
-      img: "http://dummyimage.com/250x250.png/dddddd/000000",
-    },
-    {
-      id: 6,
-      title: "Kombësi",
-      category: "Albania",
-      price: 4521.85,
-      stock: 382,
-      img: "http://dummyimage.com/250x250.png/dddddd/000000",
-    },
-    {
-      id: 7,
-      title: "Al Lagowa",
-      category: "Sudan",
-      price: 7474.76,
-      stock: 103,
-      img: "http://dummyimage.com/250x250.png/dddddd/000000",
-    },
-    {
-      id: 8,
-      title: "Sumberrejo",
-      category: "Indonesia",
-      price: 6819.1,
-      stock: 403,
-      img: "http://dummyimage.com/250x250.png/cc0000/ffffff",
-    },
-    {
-      id: 9,
-      title: "Paris 19",
-      category: "France",
-      price: 7664.03,
-      stock: 232,
-      img: "http://dummyimage.com/250x250.png/ff4444/ffffff",
-    },
-    {
-      id: 10,
-      title: "Dapchi",
-      category: "Nigeria",
-      price: 2630.42,
-      stock: 377,
-      img: "http://dummyimage.com/250x250.png/cc0000/ffffff",
-    },
-    {
-      id: 11,
-      title: "La’ershan",
-      category: "China",
-      price: 4742.41,
-      stock: 414,
-      img: "http://dummyimage.com/250x250.png/ff4444/ffffff",
-    },
-    {
-      id: 12,
-      title: "Calancuasan Norte",
-      category: "Philippines",
-      price: 5526.74,
-      stock: 40,
-      img: "http://dummyimage.com/250x250.png/cc0000/ffffff",
-    },
-  ];
+  {
+    
+      
+          id: "sofa-1",
+          title: "sillones modernos",
+          image: "./img/juegodesillones.jpg",
+          category: "Sillones",
+              stock: 15,
+         
+          price: 120000
+      },
+      {
+          id: "sofa-2",
+          title: "sofas de un cuerpo",
+          image: "./img/juegodesillones1cuerpo.jpg",
+          category: "Sillones",
+              stock: 20,
+              
+          
+          price: 45000
+      },
+      {
+          id: "sofa-3",
+          title: "sofa blanco",
+          image: "./img/juegodesillonesblanco.jpg",
+          category: "Sillones",
+              stock: 34,
+            
+    
+          price: 130000
+      },
+      {
+          id: "silla-1",
+          title: "silla vintage",
+          image: "https://i.ibb.co/vPL7F1M/pexels-pixabay-416320.jpg",
+          category: "Sillas",
+              stock: 12,
+           
+          price: 6000
+      },
+      {
+          id: "silla-2",
+          title: "sillon de un cuerpo",
+          image: "./img/sillon1cuerpo.jpg",
+          category: "Sillones",
+              stock: 11,
+            
+          price: 8000
+      },
   
-  export default products;
+      {
+          id: "grande-1",
+          title: "sillon marron",
+          image: "./img/sillon3cuerposmarron.jpg",
+          category: "Sillones",
+              stock: 45,
+          
+          price: 57000
+      },
+      {
+          id: "sofa-4",
+          title: "sillones vintage",
+          image: "./img/sillones1cuerpo.jpg",
+          category: "Sillones",
+              stock: "12",
+          
+          price: 40000
+      },
+      {
+          id: "sofa-5",
+          title: "sillon clasico",
+          image: "./img/sillonesclasicoverde.jpg",
+          category: "Sillones",
+              stock: 2,
+          
+          price: 70000
+      },
+      {
+          id: "sofa-6",
+          title: "sillones clasicos",
+          image: "./img/sillonesclasicos.jpg",
+          category: "Sillones",
+              stock: 5,
+              
+          price: 75000
+      },
+      {
+          id: "silla-3",
+          title: "sllon futurista",
+          image: "./img/sillonesfuturistas.jpg",
+          category: "Sillones",
+              stock: 8,
+          price: 56000
+      }
+    
+  ];
+
+export default products;

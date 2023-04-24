@@ -1,35 +1,9 @@
+import { useParams } from "react-router-dom";
+import Loader from "../Loader/Loader";
+import { getItems, getItemsByCategory } from "../../services/firestore";
 import React, { useState, useEffect } from "react";
 import Item from "../Item";
 import Flex from "../Flex/Flex";
-import { useParams } from "react-router-dom";
-
-/* ------------- Mock async Service -------------------  */
-import productsDatabase from "../../data/products";
-
-function getItems() {
-  const promesa = new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(productsDatabase);
-    }, 1000);
-  });
-
-  return promesa;
-}
-
-function getItemsByCategory(categoryURL) {
-  const promesa = new Promise((resolve) => {
-    setTimeout(() => {
-      // quiero filtrar el array
-      const filtro = productsDatabase.filter(
-        (item) => item.category === categoryURL
-      );
-      resolve(filtro);
-    }, 1000);
-  });
-
-  return promesa;
-}
-/* ----------------------------------------------------  */
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
@@ -45,10 +19,13 @@ function ItemListContainer() {
         setProducts(respuesta)
       );
     }
-  }, []);
+  }, [categoryid]);
+
+  if (products.length === 0) {
+    return <Flex><Loader/></Flex>
+  }
 
   return (
-    //<ItemList products={products}/>
     <Flex>
       {products.map((producto) => (
         <Item
@@ -57,6 +34,7 @@ function ItemListContainer() {
           title={producto.title}
           price={producto.price}
           category={producto.category}
+          stock={producto.stock}
           img={producto.img}
         />
       ))}
